@@ -9,7 +9,7 @@ RUN apk add git
 RUN npm install -g --silent ember-cli
 
 COPY package*.json ./
-RUN npm ci --silent
+RUN npm ci
 
 COPY . .
 
