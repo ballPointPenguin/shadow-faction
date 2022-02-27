@@ -2,13 +2,14 @@
 
 module.exports = {
   root: true,
-  parser: 'babel-eslint',
+  parser: '@babel/eslint-parser',
   parserOptions: {
     ecmaVersion: 2018,
     sourceType: 'module',
     ecmaFeatures: {
       legacyDecorators: true,
     },
+    requireConfigFile: false,
   },
   plugins: ['ember'],
   extends: [
@@ -34,6 +35,7 @@ module.exports = {
         './lib/*/index.js',
         './server/**/*.js',
         './tailwind.config.js',
+        './postcss.config.js',
       ],
       parserOptions: {
         sourceType: 'script',
